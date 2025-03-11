@@ -1,6 +1,10 @@
 package io.zipcoder;
 
 
+import java.util.ArrayList;
+
+import static org.apache.maven.shared.utils.StringUtils.split;
+
 /**
  * @author tariq
  */
@@ -15,7 +19,26 @@ public class StringsAndThings {
      *           countYZ("day fyyyz"); // Should return 2
      */
     public Integer countYZ(String input){
-        return null;
+//        String input = "fez day";
+//        Integer expected = 2;
+//        Integer actual = stringsAndThings.countYZ(input);
+//        Assert.assertEquals(expected, actual);
+        char[] inpChar = input.toCharArray();
+        char targetIsy = 'y'; //I seperated these because I want this code to be readable.
+        char targetIsz = 'z';
+        int counterY = 0; //Again.. Readability
+        int counterZ = 0;
+        int totalCounter = 0; //You know it.. Readability lol.
+        for(int i = 0; i < inpChar.length; i++){
+            if((inpChar[i] == targetIsy)) {
+                counterY++;
+            } else if ((inpChar[i] == targetIsz)){
+                counterZ++;
+            }
+            totalCounter = counterY + counterZ;
+        }
+
+        return totalCounter;
     }
 
     /**
