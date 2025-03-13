@@ -52,11 +52,17 @@ public class StringsAndThings {
      * removeString("Hello there", "x") // Should return "Hello there"
      */
     public String removeString(String base, String remove) {
-        //        String input = "day fez";
-        //        Integer expected = 2;
+       /*
+            String expected = "He there";
+            String actual = stringsAndThings.removeString("Hello there", "llo");
 
-
-        return null;
+            String expected = "Hllo thr";
+            String actual = stringsAndThings.removeString("Hello there", "e");
+        */
+        String newWrd = base.replace(remove, ""); /*This method takes base parameter, replaces anything that gets plugged into"
+        "remove" parameter with "". */
+        return newWrd;
+        //expecting String as result. Make sure to convert the result back to string.
     }
 
     /**
