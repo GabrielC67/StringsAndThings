@@ -21,10 +21,7 @@ public class StringsAndThings {
      */
     public Integer countYZ(String input) {
         int y = 0;
-//        String input = "fez day";
-//        Integer expected = 2;
-//        Integer actual = stringsAndThings.countYZ(input);
-//        Assert.assertEquals(expected, actual);
+
         String[] inputSplt = input.split(" ");
         char targetY = 'y', targetZ = 'z';
         int counter = 0;
@@ -52,13 +49,7 @@ public class StringsAndThings {
      * removeString("Hello there", "x") // Should return "Hello there"
      */
     public String removeString(String base, String remove) {
-       /*
-            String expected = "He there";
-            String actual = stringsAndThings.removeString("Hello there", "llo");
 
-            String expected = "Hllo thr";
-            String actual = stringsAndThings.removeString("Hello there", "e");
-        */
         String newWrd = base.replace(remove, ""); /*This method takes base parameter, replaces anything that gets plugged into"
         "remove" parameter with "". */
         return newWrd;
@@ -74,7 +65,31 @@ public class StringsAndThings {
      * containsEqualNumberOfIsAndNot("noisxxnotyynotxisi") // Should return true
      */
     public Boolean containsEqualNumberOfIsAndNot(String input) {
-        return null;
+
+        String space = input.concat("   ");
+        int is = 0, not = 0;
+        int i = 0, n = 0, o = 0;
+        for(int counter = 0; counter < space.length(); counter++){
+            if (space.charAt(counter) == 'i'){
+                i = counter;
+                i++;
+                if(space.charAt(i) == 's'){
+                    is++;
+                }
+            }
+            if(space.charAt(counter) == 'n'){
+                n = counter;
+                n++;
+                if(space.charAt(n) == 'o'){
+                    o = n;
+                    o++;
+                    if(space.charAt(o) == 't'){
+                        not++;
+                    }
+                }
+            }
+        }
+        return not == is; //Must return a boolean
     }
 
     /**
@@ -85,6 +100,8 @@ public class StringsAndThings {
      * gHappy("xxggyygxx") // Should return  false
      */
     public Boolean gIsHappy(String input) {
+
+
         return null;
     }
 
