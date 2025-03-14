@@ -1,6 +1,8 @@
 package io.zipcoder;
 
 
+import org.apache.maven.shared.utils.StringUtils;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -128,7 +130,19 @@ public class StringsAndThings {
      * countTriple("a") // Should return 0
      */
     public Integer countTriple(String input) {
-        return null;
+        int counter = 0;
+        char[] spltStr = new char[input.length()];
+        for (int i = 0; i < input.length(); i++) {
+            spltStr[i] = input.charAt(i);
+        }
+        for (int j = 0; j < spltStr.length - 1; j++) {
+            if (spltStr[j] == spltStr[j + 1] && spltStr[j + 1] == spltStr[j + 2]){
+                counter++;
+            }
+
+        }
+
+        return counter;
     }
 }
 
