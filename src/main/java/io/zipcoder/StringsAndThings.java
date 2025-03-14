@@ -110,11 +110,13 @@ public class StringsAndThings {
      */
     public Boolean gIsHappy(String input) {
     /* I'm thinking the best thing to do is use a counter to find out if the g is next to another g. If not, then I'll say fales.*/
-        int count = 0;
-
-
-
-        return null; //counter > 0;
+        int gg = 0;
+        for (int i = 0, j = 1; i < input.length() - 1; i++, j++) {
+            if (input.charAt(i) == 'g' && input.charAt(j) == 'g') {
+                gg++;
+            }
+        }
+        return gg > 0; //counter > 0;
     }
 
 
