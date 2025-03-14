@@ -66,10 +66,10 @@ public class StringsAndThings {
      */
     public Boolean containsEqualNumberOfIsAndNot(String input) {
 
-       int is = 0, not = 0;
+       /* int is = 0, not = 0;
         int i = 0, n = 0, o = 0;
         for(int counter = 0; counter < input.length() - 1; counter++){
-            if (input.charAt(counter) == 'i'){
+            if (input.charAt(counter) == 'i' && ){
                 i = counter;
                 i++;
                 if(input.charAt(i) == 's'){
@@ -87,8 +87,18 @@ public class StringsAndThings {
                     }
                 }
             }
+        }*/
+
+        int is = 0, not = 0;
+        for(int counter = 0; counter < input.length() - 1; counter++){
+            if (input.charAt(counter) == 'i' && input.charAt(counter + 1) == 's'){
+                    is++;
+            }
+            if(input.charAt(counter) == 'n' && input.charAt(counter + 1) == 'o' && input.charAt(counter + 2) == 't'){
+                        not++;
+            }
         }
-        return not == is; //Must return a boolean
+        return is == not; //Must return a boolean
     }
 
     /**
