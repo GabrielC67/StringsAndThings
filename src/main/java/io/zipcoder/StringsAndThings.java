@@ -66,24 +66,23 @@ public class StringsAndThings {
      */
     public Boolean containsEqualNumberOfIsAndNot(String input) {
 
-        String space = input.concat("   ");
-        int is = 0, not = 0;
+       int is = 0, not = 0;
         int i = 0, n = 0, o = 0;
-        for(int counter = 0; counter < space.length(); counter++){
-            if (space.charAt(counter) == 'i'){
+        for(int counter = 0; counter < input.length() - 1; counter++){
+            if (input.charAt(counter) == 'i'){
                 i = counter;
                 i++;
-                if(space.charAt(i) == 's'){
+                if(input.charAt(i) == 's'){
                     is++;
                 }
             }
-            if(space.charAt(counter) == 'n'){
+            if(input.charAt(counter) == 'n'){
                 n = counter;
                 n++;
-                if(space.charAt(n) == 'o'){
+                if(input.charAt(n) == 'o'){
                     o = n;
                     o++;
-                    if(space.charAt(o) == 't'){
+                    if(input.charAt(o) == 't'){
                         not++;
                     }
                 }
@@ -100,9 +99,12 @@ public class StringsAndThings {
      * gHappy("xxggyygxx") // Should return  false
      */
     public Boolean gIsHappy(String input) {
+    /* I'm thinking the best thing to do is use a counter to find out if the g is next to another g. If not, then I'll say fales.*/
+        int count = 0;
 
 
-        return null;
+
+        return null; //counter > 0;
     }
 
 
